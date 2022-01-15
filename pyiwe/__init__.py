@@ -6,12 +6,20 @@ See README.md for complete documentation.
 """
 
 __version__ = '0.0.1'
-
-from .iwe import PyIW
-from .utils import processing
-from .utils import visualize
-from .config import pyiw_config
+import sys
+import traceback
 from .tnt_install import TNTSetup
+
+try:
+    from .iwe import PyIW
+    from .utils import processing
+    from .utils import visualize
+    from .config import pyiw_config
+except ModuleNotFoundError:
+    print('ModuleNotFoundError happened. Check your dependencies.')
+    traceback.print_exc(file=sys.stdout)
+
 TNTSetup().setup()
+
 
 __all__ = ['iwe', 'utils', 'config']
