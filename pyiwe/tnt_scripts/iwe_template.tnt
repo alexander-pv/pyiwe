@@ -1,0 +1,41 @@
+
+macro=;            /*Activate macro language*/
+macro [ %(8) ;     /*Memory to be used by macro language, in KB*/
+
+clb;             /*Clear test buffer*/
+echo%(10);       /*Echo command*/
+report%(10);         /*Report status of time-consuming operations*/
+macreport%(10);      /*Inform results of comparisons/assignments during macros*/
+log/;            /*Close current log file*/
+log %(11)/logfile.txt; /*Create and open logfile.txt*/
+
+rseed %(7);        /*Set random seed (0 = time ; default = 1)*/
+macfloat %(6) ;    /*Floating point calculations enabled*/
+
+var: concavity;  /*Concavity constant*/
+var: n_run;      /*The number of the run with the same concavity*/
+set concavity %(1);
+set n_run     %(9);
+
+quote ****** PIWE: Run: ['n_run'] Current k parameter: ['concavity']*****;
+
+hold %(2);           /*Set a tree buffer to keep up to specified number of trees*/
+piwe='concavity';  /*Set implied weighting it on, with specified weighting constant.*/
+xmult: prvmix;     /*If trees existed in memory before running xmult,
+                     use the last one to autoconstrain first xmult replication.*/
+xmult=hits %(3) level %(4) drift %(5); /* 1.N hits to best length. 2.Search level (0-10) 3.N cycles of drifting. */
+xmult:;
+
+bbreak=tbr;       /*Perform branch-swapping, using pre-existing trees as starting point.*/
+taxname = ;       /*When referring to terminal nodes, use names.*/
+blength *0;       /*Show table with branch lengths for tree(s) N using a tree diagram*/
+
+/*Saving operations*/
+tsave* %(11)/temp_'n_run'_k_'concavity'.tre;   /*Open in parentethical notation, using taxon names or numbers (see under "taxname")*/
+save;                       /*Save trees to file (previously opened with "tsave")*/
+tsave/;                     /*Close tree file*/
+
+quit;
+
+
+

@@ -1,0 +1,7 @@
+#NEXUS
+
+begin trees ; 
+tree tnt_1 = [&U] 
+(Stenotus_binotatus ,(Angulonotus_grisescens ,((Punctifulvius_kerzhneri ,(Cylapus_citus ,Palaucoris_sulawesicus_ )),(((Helopeltis_clavifer ,Chamopsis_tuberculatus ),((Sinervus_baerensprungi ,((Pycnoderes_sp. ,Sixeonotus_sp. ),(Eccritotarsus_sp. ,(Heterocoris_dilatatus ,Eurycipitia_clarus )))),((Bryocorella_emboliata ,Hekista_laudator ),(((Bryocoris_pteridis ,(Bryocoris_persimilis ,Bryocoris_montanus )),(Bryocoris_convexicollis ,Bryocoris_sichuanensis )),(Diplazicoris_lombokianus ,(Bryophilocapsus_tosamontanus ,(Monalocoris_punctipennis ,(Monalocoris_filicis ,Monalocoris_americanus )))))))),(Dicyphus_errans ,Nesidiocoris_tenuis )))));
+
+end ; 
