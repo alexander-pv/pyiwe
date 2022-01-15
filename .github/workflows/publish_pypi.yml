@@ -6,12 +6,15 @@ on:
   pull_request:
     branches: [ main ]
 
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
     build-n-publish:
+
         name: Build and publish Python distribution
+
         runs-on: ubuntu-latest
+
         steps:
             - uses: actions/checkout@main
             - name: Initialize Python 3.9
