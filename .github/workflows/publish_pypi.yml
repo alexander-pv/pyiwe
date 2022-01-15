@@ -11,7 +11,7 @@ jobs:
     name: Publish a package
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@master
 
       - name: Initialize Python 3.9
         uses: actions/setup-python@v1
