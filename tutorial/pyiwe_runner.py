@@ -6,7 +6,6 @@ import argparse
 import os
 import sys
 
-import matplotlib.pyplot as plt
 import pandas as pd
 from ete3 import Tree as ETree
 
