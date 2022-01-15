@@ -19,7 +19,7 @@ class _TNTSetup(install):
 
 
 with open("README.md", "r", encoding='utf8') as f:
-    description = f.read()
+    long_description = f.read()
 
 setup(
     name='pyiwe',
@@ -29,7 +29,8 @@ setup(
     license='MIT',
     author='Alexander Popkov',
     author_email='alr.popkov@gmail.com',
-    description=description,
+    description="Python wrapper for TNT (Tree analysis using New Technology) implied weighting with clades support",
+    long_description=long_description,
     install_requires=[
         'ete3>=3.1.2',
         'biopython==1.79',
