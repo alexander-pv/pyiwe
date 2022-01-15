@@ -16,7 +16,7 @@ $ >>> import pyiwe
 
  2. From source:
 ```bash
-$ git clone <URL> && cd pyiwe
+$ git clone git@github.com:alexander-pv/pyiwe.git && cd pyiwe
 $ pip install .
 ```
 Terminal TNT will be installed automatically.
