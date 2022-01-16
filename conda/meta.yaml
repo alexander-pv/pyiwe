@@ -16,6 +16,7 @@ requirements:
   build:
     - python
     - wheel
+    - flake8
   host:
     - python
   run:
