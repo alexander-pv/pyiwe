@@ -2,10 +2,11 @@ name: Publish to Anaconda Cloud
 
 on:
   workflow_dispatch:
-    platform:
-      description: 'Platform'
-      default: 'ubuntu-latest'
-      required: true
+    inputs:
+      platform:
+        description: 'Platform'
+        default: 'ubuntu-latest'
+        required: true
 
 jobs:
   publish:
