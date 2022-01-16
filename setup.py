@@ -41,6 +41,7 @@ setup(
         'pillow==8.4.0',
         'seaborn>=0.11.2',
         'matplotlib>=3.5.0',
+        'PyQt5',
         'jupyter',
     ],
     package_data={'pyiwe': ['tests/testdata/bryocorini/*',
