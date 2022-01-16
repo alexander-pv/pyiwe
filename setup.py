@@ -34,7 +34,7 @@ setup(
     long_description=long_description,
     install_requires=[
         'ete3>=3.1.2',
-        'biopython>=1.6',
+        'biopython>=1.78',
         'tqdm>=4.62.3',
         'numpy>=1.19',
         'pandas>=1.3.5',
