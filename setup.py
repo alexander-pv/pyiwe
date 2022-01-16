@@ -19,7 +19,7 @@ class _TNTSetup(install):
         install.run(self)
 
 
-with open("README.md", "r", encoding='utf8') as f:
+with open("README.rst", "r", encoding='utf8') as f:
     long_description = f.read()
 
 setup(

@@ -275,7 +275,7 @@ class PyIW:
         """
         self.run_iw(matrix_path=matrix_path)
         merged_trees = self.load_iw_trees()
-        majority_tree = _iw_majority_consensus(merged_trees, cutoff=cutoff)
+        majority_tree = _iw_maj_consensus(merged_trees, cutoff=cutoff)
         for c in majority_tree.get_nonterminals():
             if c.confidence:
                 c.confidence = round(c.confidence, support_precision)
@@ -357,7 +357,7 @@ def _iw_count_clades(trees: list[ph.BaseTree.Tree]) -> tuple[dict, int]:
     return bitstrs, tree_count
 
 
-def _iw_majority_consensus(trees: list[ph.BaseTree.Tree], cutoff: float = 0) -> ph.BaseTree.Tree:
+def _iw_maj_consensus(trees: list[ph.BaseTree.Tree], cutoff: float = 0) -> ph.BaseTree.Tree:
     """Search majority rule consensus tree from multiple trees.
 
     This is a extend majority rule method, which means the you can set any

@@ -34,9 +34,11 @@ Terminal TNT will be installed automatically.
 
 Run `pyiwe_runner.py` to see arguments help:
 
-```
+```bash
 $ cd ./pyiwe/tutorials && python pyiwe_runner.py -h
+```
 
+```
 Argument parser for pyiwe_runner.py
 
 positional arguments:
@@ -68,7 +70,6 @@ optional arguments:
   -memory memory        float, Memory to be used by macro language, in KB, default=10240
   -c                    bool, clear temp *.tre files in output folder after processing
   -v                    bool, add processing verbosity
-  
 ```
 
 Basic example:
