@@ -34,8 +34,8 @@ jobs:
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
 
-      - name: Build binary wheel and a source tarball
-        run: python setup.py sdist
+      - name: Build wheel file
+        run: python setup.py bdist_wheel
 
       - name: Publish package to Test PyPI
         uses: pypa/gh-action-pypi-publish@master
