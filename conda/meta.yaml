@@ -17,11 +17,9 @@ requirements:
     - python
     - wheel
     - flake8
-  host:
-    - python
   run:
     - python
-    - ete3>=3.1.2
+    - ete3>=3.*
     - biopython>=1.78
     - tqdm>=4.62.3
     - numpy>=1.19
@@ -39,4 +37,6 @@ test:
 about:
   home: {{ data['url'] }}
   license: {{ data['license'] }}
-summary: {{ data['description'] }}
+  license_file: LICENSE
+  summary: {{ data['description'] }}
+  doc_source_url: https://github.com/alexander-pv/pyiwe/blob/main/README.rst
