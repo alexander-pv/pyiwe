@@ -1,0 +1,41 @@
+{% set data = load_setup_py_data() %}
+
+package:
+  name: pyiwe
+  version: {{ data['version'] }}
+
+source:
+  path: ..
+
+build:
+  x86_64: python
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - python
+    - wheel
+  host:
+    - python
+  run:
+    - python
+    - ete3>=3.1.2
+    - biopython>=1.78
+    - tqdm>=4.62.3
+    - numpy>=1.19
+    - pandas>=1.3.5
+    - pillow>=8.4.0
+    - seaborn>=0.11.2
+    - matplotlib>=3.5.0
+    - PyQt5
+    - jupyter
+
+test:
+  imports:
+    - pyiwe
+
+about:
+  home: {{ data['url'] }}
+  license: {{ data['license'] }}
+summary: {{ data['description'] }}

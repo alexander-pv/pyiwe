@@ -37,7 +37,7 @@ setup(
         'tqdm>=4.62.3',
         'numpy>=1.19',
         'pandas>=1.3.5',
-        'pillow==8.4.0',
+        'pillow>=8.4.0',
         'seaborn>=0.11.2',
         'matplotlib>=3.5.0',
         'PyQt5',
