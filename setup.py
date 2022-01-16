@@ -3,8 +3,8 @@ import os
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
-from pyiwe.tnt_install import TNTSetup
 from pyiwe import __version__ as pyiwe_ver
+from pyiwe.tnt_install import TNTSetup
 
 
 class _TNTSetup(install):
@@ -19,9 +19,6 @@ class _TNTSetup(install):
         install.run(self)
 
 
-with open("README.rst", "r", encoding='utf8') as f:
-    long_description = f.read()
-
 setup(
     name='pyiwe',
     version=pyiwe_ver,
@@ -31,7 +28,6 @@ setup(
     author='Alexander Popkov',
     author_email='alr.popkov@gmail.com',
     description="Python wrapper for TNT (Tree analysis using New Technology) implied weighting with clades support",
-    long_description=long_description,
     install_requires=[
         'ete3>=3.1.2',
         'biopython==1.79',

@@ -2,7 +2,7 @@
 TNT (Tree analysis using New Technology) implied weighting with branch supports Python wrapper.
 TNT source: http://www.lillo.org.ar/phylogeny/tnt/ (Goloboff, Farris, & Nixon, 2003)
 ==================================
-See README.rst for complete documentation.
+See README.md for complete documentation.
 """
 
 __version__ = '0.0.1'
