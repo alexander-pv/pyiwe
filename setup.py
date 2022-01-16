@@ -40,15 +40,15 @@ setup(
         'pillow>=8.4.0',
         'seaborn>=0.11.2',
         'matplotlib>=3.5.0',
-        'PyQt5',
-        'jupyter',
+        'PyQt5>=5.15.6',
+        'jupyter>=1.0.0',
     ],
     package_data={'pyiwe': ['tests/testdata/bryocorini/*',
                             'tests/testscripts/*',
                             'tnt_scripts/*',
                             'tnt_install/*'
                             ]},
-    setup_requires=['pytest-runner', 'flake8'],
+    setup_requires=['flake8'],
     tests_require=['pytest'],
     python_requires='>=3.6',
     cmdclass={
