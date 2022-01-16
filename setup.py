@@ -50,7 +50,7 @@ setup(
                             ]},
     setup_requires=['flake8'],
     tests_require=['pytest'],
-    python_requires='>=3.6',
+    python_requires='>=3.9',
     cmdclass={
         'install': _TNTSetup,
     },
