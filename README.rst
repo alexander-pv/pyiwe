@@ -14,7 +14,7 @@ Installation
 
 .. code:: bash
 
-   $ conda install -c alexander-pv pyiwe
+   $ conda install -c anaconda -c conda-forge -c alexander-pv pyiwe
 
 The package file from PyPi or conda does not include terminal TNT. To
 install it, open python in terminal mode and import ``pyiwe`` package.
