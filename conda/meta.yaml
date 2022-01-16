@@ -14,7 +14,6 @@ build:
 
 requirements:
   build:
-    - unzip
     - python
     - wheel
     - flake8
