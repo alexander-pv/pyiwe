@@ -5,6 +5,7 @@ import sys
 
 class TNTSetup:
     """Install terminal TNT"""
+
     def __init__(self, installers_path: str or None = None):
         self.tnt_keyword = 'TNT'
         self.env_variable = "PATH"
@@ -22,5 +23,4 @@ class TNTSetup:
             raise AssertionError(f"Incorrect platform:{self.platform}." +
                                  f"Installation implemented for: {self.available_platforms}")
         if self.tnt_keyword not in os.environ[self.env_variable]:
-
             subprocess.call(self.tnt_install_scripts[self.platform], stdout=sys.stdout)

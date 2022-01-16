@@ -5,7 +5,7 @@ TNT source: http://www.lillo.org.ar/phylogeny/tnt/ (Goloboff, Farris, & Nixon, 2
 See README.md for complete documentation.
 """
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 import sys
 import traceback
