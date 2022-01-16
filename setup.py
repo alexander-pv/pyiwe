@@ -40,7 +40,7 @@ setup(
         'pillow>=8.4.0',
         'seaborn>=0.11.2',
         'matplotlib>=3.5.0',
-        'PyQt5>=5.15.6',
+        'PyQt5>=5.*',
         'jupyter>=1.0.0',
     ],
     package_data={'pyiwe': ['tests/testdata/bryocorini/*',
