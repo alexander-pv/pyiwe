@@ -4,6 +4,7 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install
 
 from pyiwe.tnt_install import TNTSetup
+from pyiwe import __version__ as pyiwe_ver
 
 
 class _TNTSetup(install):
@@ -23,7 +24,7 @@ with open("README.md", "r", encoding='utf8') as f:
 
 setup(
     name='pyiwe',
-    version='0.0.1',
+    version=pyiwe_ver,
     packages=find_packages(include=['pyiwe', 'pyiwe.utils', 'pyiwe.tnt_install']),
     url='',
     license='MIT',

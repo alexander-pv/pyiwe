@@ -1,35 +1,39 @@
-
-### Python wrapper for TNT (Tree analysis using New Technology) implied weighting with clades support 
+### Python wrapper for TNT (Tree analysis using New Technology) implied weighting with clades support
 
 #### Installation
 
- 1. Pip:
+1. Pip:
+
 ```bash
 $ pip install pyiwe
 ```
-`*.whl` file from PyPi does not include terminal TNT. 
-To install it, open python in terminal mode and import `pyiwe` package.
+
+`*.whl` file from PyPi does not include terminal TNT. To install it, open python in terminal mode and import `pyiwe`
+package.
+
 ```bash
 $ python
 $ >>> import pyiwe
 ```
 
- 2. From source:
+2. From source:
+
 ```bash
 $ git clone git@github.com:alexander-pv/pyiwe.git && cd pyiwe
 $ pip install .
 ```
-Terminal TNT will be installed automatically.
 
+Terminal TNT will be installed automatically.
 
 #### Tutorial
 
-  * `implied_weighting_theory.ipynb`, theory behind implied weighting with fitting functions plots to play;
-  * `pyiwe_example.ipynb`, examples of reading TNT trees, plotting trees, getting branch supports and
-concavity values distributions for each clade in a tree based on TNT feature matrices;
-  * `pyiwe_runner.py`, terminal-based example for a quick start;
+* `implied_weighting_theory.ipynb`, theory behind implied weighting with fitting functions plots to play;
+* `pyiwe_example.ipynb`, examples of reading TNT trees, plotting trees, getting branch supports and concavity values
+  distributions for each clade in a tree based on TNT feature matrices;
+* `pyiwe_runner.py`, terminal-based example for a quick start;
 
 Run `pyiwe_runner.py` to see arguments help:
+
 ```
 $ cd ./pyiwe/tutorials && python pyiwe_runner.py -h
 
@@ -64,10 +68,11 @@ optional arguments:
   -memory memory        float, Memory to be used by macro language, in KB, default=10240
   -c                    bool, clear temp *.tre files in output folder after processing
   -v                    bool, add processing verbosity
+  
 ```
 
-
 Basic example:
+
 ```bash
 $ cd ./pyiwe/tutorials
 $ python pyiwe_runner.py ../pyiwe/tests/testdata/bryocorini/SI_4_Bryocorinae_matrix.tnt -c

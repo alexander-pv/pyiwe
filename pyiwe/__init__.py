@@ -6,8 +6,10 @@ See README.md for complete documentation.
 """
 
 __version__ = '0.0.1'
+
 import sys
 import traceback
+
 from .tnt_install import TNTSetup
 
 try:
@@ -20,6 +22,5 @@ except ModuleNotFoundError:
     traceback.print_exc(file=sys.stdout)
 
 TNTSetup().setup()
-
 
 __all__ = ['iwe', 'utils', 'config']
