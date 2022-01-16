@@ -32,7 +32,7 @@ setup(
     description="Python wrapper for TNT (Tree analysis using New Technology) implied weighting with clades support",
     long_description=long_description,
     install_requires=[
-        'ete3>=3.1.2',
+        'ete3>=3.*',
         'biopython>=1.78',
         'tqdm>=4.62.3',
         'numpy>=1.19',
