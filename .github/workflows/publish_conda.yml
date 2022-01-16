@@ -2,10 +2,14 @@ name: Publish to Anaconda Cloud
 
 on:
   workflow_dispatch:
+    platform:
+      description: 'Platform'
+      default: 'ubuntu-latest'
+      required: true
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ${{ github.event.inputs.platform }}
     steps:
     - uses: actions/checkout@v2
     - name: publish-to-conda
