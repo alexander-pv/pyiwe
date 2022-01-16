@@ -10,15 +10,21 @@ Installation
 
    $ pip install pyiwe
 
-``*.whl`` file from PyPi does not include terminal TNT. To install it,
-open python in terminal mode and import ``pyiwe`` package.
+2. conda:
+
+.. code:: bash
+
+   $ conda install -c alexander-pv pyiwe
+
+The package file from PyPi or conda does not include terminal TNT. To
+install it, open python in terminal mode and import ``pyiwe`` package.
 
 .. code:: bash
 
    $ python
    $ >>> import pyiwe
 
-2. From source:
+3. From source:
 
 .. code:: bash
 
