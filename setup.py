@@ -26,7 +26,6 @@ setup(
     name=f'pyiwe',
     version=pyiwe_ver,
     packages=find_packages(include=['pyiwe', 'pyiwe.utils', 'pyiwe.tnt_install']),
-    url='',
     license='MIT',
     author='Alexander Popkov',
     author_email='alr.popkov@gmail.com',
@@ -56,10 +55,18 @@ setup(
         'install': _TNTSetup,
     },
     classifiers=[
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9'
-    ]
+        "Intended Audience :: Science/Research",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved",
+        "Operating System :: Unix",
+        "Operating System :: Microsoft :: Windows",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+    ],
+    url="https://github.com/alexander-pv/pyiwe",
+    download_url="https://pypi.org/project/pyiwe/#files"
 
 )
