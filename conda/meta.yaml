@@ -29,8 +29,8 @@ requirements:
     - pillow>=8.4.0
     - seaborn>=0.11.2
     - matplotlib>=3.5.0
-    - pyqt
-    - jupyter
+    - pyqt>=5.15.6
+    - jupyter>=1.0.0
 
 test:
   imports:
