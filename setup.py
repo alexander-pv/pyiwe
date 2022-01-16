@@ -23,7 +23,7 @@ with open("README.rst", "r", encoding='utf8') as f:
     long_description = f.read()
 
 setup(
-    name='pyiwe',
+    name=f'pyiwe {pyiwe_ver}',
     version=pyiwe_ver,
     packages=find_packages(include=['pyiwe', 'pyiwe.utils', 'pyiwe.tnt_install']),
     url='',
