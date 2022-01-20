@@ -1,3 +1,14 @@
+[![Last updated](https://anaconda.org/alexander-pv/pyiwe/badges/latest_release_date.svg)](https://anaconda.org/alexander-pv/pyiwe)
+[![Platform](
+https://anaconda.org/alexander-pv/pyiwe/badges/platforms.svg)](https://anaconda.org/alexander-pv/pyiwe)
+[![License](https://anaconda.org/alexander-pv/pyiwe/badges/license.svg)](LICENSE) \
+[![install](https://anaconda.org/conda-forge/mlconjug/badges/installer/conda.svg)](https://anaconda.org/alexander-pv/pyiwe)
+[![Downloads](https://anaconda.org/alexander-pv/pyiwe/badges/downloads.svg)](https://anaconda.org/alexander-pv/pyiwe) \
+[![PyPI version](https://badge.fury.io/py/pyiwe.svg)](https://pypi.org/project/pyiwe/)
+[![Downloads](https://pepy.tech/badge/pyiwe)](https://pypi.org/project/pyiwe/)
+
+
+
 ### Python wrapper for TNT (Tree analysis using New Technology) implied weighting with clades support
 
 #### Installation
