@@ -1,3 +1,4 @@
+from __future__ import annotations
 import io
 import re
 
@@ -32,7 +33,7 @@ def check_tree_formats_selection(tree_format: str):
     Returns:
 
     """
-    _tree_formats = list(supported_formats.keys())
+    _tree_formats = tuple(supported_formats.keys())
     if tree_format not in _tree_formats:
         raise AssertionError(f'Tree format is not recognized: {tree_format}\n Available: {_tree_formats}')
 
@@ -121,7 +122,7 @@ def buffer_convert(trees, out_format: str, **kwargs) -> io.StringIO:
 
 
 def get_tnt_trees(tree_path: str, output_format: str = 'newick',
-                  verbose: bool = True) -> tuple[list[ph.BaseTree.Tree], str]:
+                  verbose: bool = True) -> list[list[ph.BaseTree.Tree], str]:
     """
     Read TNT tree and return it in format `output_format`.
     Args:
@@ -129,7 +130,7 @@ def get_tnt_trees(tree_path: str, output_format: str = 'newick',
         output_format: str, possible formats: 'newick', 'nexus', 'nexml', 'phyloxml', newick is default
         verbose:       bool, verbosity for trees reading
 
-    Returns: tuple[list[ph.BaseTree.Tree], str]
+    Returns: list[list[ph.BaseTree.Tree], str]
 
     """
     check_tree_formats_selection(output_format)

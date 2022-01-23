@@ -1,5 +1,4 @@
 import os
-
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 
@@ -32,15 +31,15 @@ setup(
     description="Python wrapper for TNT (Tree analysis using New Technology) implied weighting with clades support",
     long_description=long_description,
     install_requires=[
-        'ete3>=3.*',
+        'ete3>=3.1.2',
         'biopython>=1.78',
         'tqdm>=4.62.3',
         'numpy>=1.19',
-        'pandas>=1.3.5',
+        'pandas>=1.1.0',
         'pillow>=8.4.0',
         'seaborn>=0.11.2',
         'matplotlib>=3.5.0',
-        'PyQt5>=5.*',
+        'PyQt5>=5.15.6',
         'jupyter>=1.0.0',
     ],
     package_data={'pyiwe': ['tests/testdata/bryocorini/*',
@@ -50,7 +49,7 @@ setup(
                             ]},
     setup_requires=['flake8'],
     tests_require=['pytest'],
-    python_requires='>=3.9',
+    python_requires='>=3.7',
     cmdclass={
         'install': _TNTSetup,
     },
@@ -61,6 +60,8 @@ setup(
         "Operating System :: Unix",
         "Operating System :: Microsoft :: Windows",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
     ],
     url="https://github.com/alexander-pv/pyiwe",

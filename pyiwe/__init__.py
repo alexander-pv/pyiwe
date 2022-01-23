@@ -5,7 +5,7 @@ TNT source: http://www.lillo.org.ar/phylogeny/tnt/ (Goloboff, Farris, & Nixon, 2
 See README.md for complete documentation.
 """
 
-__version__ = '0.0.6'
+__version__ = '0.0.7'
 
 import sys
 import traceback
@@ -18,7 +18,7 @@ try:
     from .utils import visualize
     from .config import pyiw_config
 except ModuleNotFoundError:
-    print('ModuleNotFoundError happened. Check your dependencies.')
+    print('ModuleNotFoundError happened. Check your dependencies. Ignore during packaging.')
     traceback.print_exc(file=sys.stdout)
 
 TNTSetup().setup()

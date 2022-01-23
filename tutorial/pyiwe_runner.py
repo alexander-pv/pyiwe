@@ -111,7 +111,12 @@ def runner(args: argparse.Namespace):
     with open(os.path.join(args.output_folder, 'final_tree_newick.txt'), 'w') as f:
         f.write(majority_tree.format(format='newick'))
     open_ete_browser(tree=ETree(majority_tree.format(format='newick')))
-    df_tree_flat = df.explode(column=['k_vals'])
+
+    if int(pd.__version__.split('.')[1]) < 3:
+        df_tree_flat = df.explode('k_vals')
+    else:
+        df_tree_flat = df.explode(column=['k_vals'])
+
     tree_vis.make_k_stripplot(df=df_tree_flat, x='clade_id', y='k_vals', save=False)
 
 
