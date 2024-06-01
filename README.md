@@ -90,7 +90,7 @@ optional arguments:
 Basic example:
 
 ```bash
-$ cd ./pyiwe/tutorials
+$ cd ./pyiwe/tutorial
 $ python pyiwe_runner.py ../pyiwe/tests/testdata/bryocorini/SI_4_Bryocorinae_matrix.tnt -c
 ```
 
