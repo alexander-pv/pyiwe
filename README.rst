@@ -16,14 +16,6 @@ Installation
 
    $ conda install -c anaconda -c conda-forge -c alexander-pv pyiwe
 
-The package file from PyPi or conda does not include terminal TNT. To
-install it, open python in terminal mode and import ``pyiwe`` package.
-
-.. code:: bash
-
-   $ python
-   $ >>> import pyiwe
-
 3. From source:
 
 .. code:: bash
@@ -32,6 +24,14 @@ install it, open python in terminal mode and import ``pyiwe`` package.
    $ pip install .
 
 Terminal TNT will be installed automatically.
+
+The package file from PyPi or conda does not include terminal TNT. To
+install it, open python in terminal mode and import ``pyiwe`` package.
+
+.. code:: bash
+
+   $ python
+   $ >>> import pyiwe
 
 Tutorial
 ^^^^^^^^
@@ -47,7 +47,7 @@ Run ``pyiwe_runner.py`` to see arguments help:
 
 .. code:: bash
 
-   $ cd ./pyiwe/tutorials && python pyiwe_runner.py -h
+   $ cd ./pyiwe/tutorial && python pyiwe_runner.py -h
 
 ::
 
@@ -87,7 +87,7 @@ Basic example:
 
 .. code:: bash
 
-   $ cd ./pyiwe/tutorials
+   $ cd ./pyiwe/tutorial
    $ python pyiwe_runner.py ../pyiwe/tests/testdata/bryocorini/SI_4_Bryocorinae_matrix.tnt -c
 
 References
