@@ -3,6 +3,7 @@ import glob
 import itertools
 import os
 import subprocess
+import datetime as dt
 from typing import TextIO
 
 import numpy as np
@@ -477,16 +478,17 @@ class Logger:
     ):
         self.tnt_experiment_log = tnt_experiment_log
         self.summary_log = summary_log
+        self.summary_log_path = os.path.join(self.log_path, self.summary_log)
         self.log_path = log_path
         self.file = self.open_log()
 
     def open_log(self) -> TextIO:
-        return open(os.path.join(self.log_path, self.summary_log), 'w')
+        with open(self.summary_log_path, 'a+') as f:
+            f.write(f"Experiment: {str(dt.datetime.now())}" + '\n')
+        return open(self.summary_log_path, 'a+')
 
     def close_log(self):
         self.file.close()
 
     def update(self, desc: str = ''):
-        with open(os.path.join(self.log_path, self.summary_log), 'r') as f:
-            self.file.write("\n%s\n%s" % (desc, " ".join(f.readlines())))
-        os.remove(os.path.join(self.log_path, self.summary_log))
+        self.file.write(desc + '\n')
