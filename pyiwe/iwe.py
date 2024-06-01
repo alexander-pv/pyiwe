@@ -135,7 +135,7 @@ class PyIW:
         self._check_params()
         self._check_output_folder()
         self.noised_k_vectorized = np.vectorize(self._make_k_noised)
-        self.logger = Logger(log_path=self.output_folder)
+        self.logger = Logger(log_dir=self.output_folder)
 
         self.tnt_script_path = os.path.join(config.pyiw_config.root_dir, 'tnt_scripts', 'iwe_template.tnt')
 
@@ -472,14 +472,14 @@ class Logger:
 
     def __init__(
             self,
-            log_path: str,
+            log_dir: str,
             tnt_experiment_log: str = 'logfile.txt',
             summary_log: str = 'logfile_summary.txt'
     ):
         self.tnt_experiment_log = tnt_experiment_log
         self.summary_log = summary_log
-        self.summary_log_path = os.path.join(self.log_path, self.summary_log)
-        self.log_path = log_path
+        self.log_dir = log_dir
+        self.summary_log_path = os.path.join(self.log_dir, self.summary_log)
         self.file = self.open_log()
 
     def open_log(self) -> TextIO:
