@@ -469,7 +469,12 @@ def _iw_maj_consensus(trees: list[ph.BaseTree.Tree], cutoff: float = 0) -> ph.Ba
 
 class Logger:
 
-    def __init__(self, log_path: str, tnt_experiment_log: str = 'logfile.txt', summary_log: str = 'tnt_logfile.txt'):
+    def __init__(
+            self,
+            log_path: str,
+            tnt_experiment_log: str = 'logfile.txt',
+            summary_log: str = 'logfile_summary.txt'
+    ):
         self.tnt_experiment_log = tnt_experiment_log
         self.summary_log = summary_log
         self.log_path = log_path
@@ -482,6 +487,6 @@ class Logger:
         self.file.close()
 
     def update(self, desc: str = ''):
-        with open(os.path.join(self.log_path, self.tnt_experiment_log), 'r') as f:
+        with open(os.path.join(self.log_path, self.summary_log), 'r') as f:
             self.file.write("\n%s\n%s" % (desc, " ".join(f.readlines())))
-        os.remove(os.path.join(self.log_path, self.tnt_experiment_log))
+        os.remove(os.path.join(self.log_path, self.summary_log))
