@@ -14,11 +14,11 @@ build:
 
 requirements:
   build:
-    - python<=3.9
+    - python
     - wheel
     - flake8
   run:
-    - python<=3.9
+    - python
     - ete3>=3.1.2
     - biopython==1.78
     - tqdm>=4.62.3
