@@ -19,10 +19,22 @@ echo -e "\nCreating installation folder"
 mkdir -p $TNT_PATH && cd $TNT_PATH
 
 echo -e "\nDownloading TNT"
-wget http://www.lillo.org.ar/phylogeny/tnt/tnt64.zip
+FILE="tnt64.zip"
+FILE_URL="http://www.lillo.org.ar/phylogeny/tnt/tnt64.zip"
+if [ -f "$FILE" ]; then
+    echo "$FILE already exists."
+else
+    echo "$FILE does not exist. Downloading..."
+    wget "$FILE_URL"
+    if [ $? -eq 0 ]; then
+        echo "Download completed successfully."
+    else
+        echo "Download failed."
+    fi
+fi
 
 echo -e "\nUnpacking..."
-unzip tnt64.zip -d $TNT_PATH
+unzip $FILE -d $TNT_PATH
 rm tnt64.zip
 
 echo -e "\nAdding TNT to PATH"
