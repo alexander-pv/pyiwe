@@ -16,7 +16,7 @@ apt-get update
 apt-get install -y pvm libncurses5 unzip
 
 echo -e "\nCreating installation folder"
-mkdir $TNT_PATH && cd $TNT_PATH
+mkdir -p $TNT_PATH && cd $TNT_PATH
 
 echo -e "\nDownloading TNT"
 wget http://www.lillo.org.ar/phylogeny/tnt/tnt64.zip

@@ -8,7 +8,6 @@ See README.md for complete documentation.
 __version__ = '0.0.8'
 
 import sys
-import traceback
 
 from .tnt_install import TNTSetup
 
@@ -18,8 +17,7 @@ try:
     from .utils import visualize
     from .config import pyiw_config
 except ModuleNotFoundError:
-    print('ModuleNotFoundError happened. Check your dependencies. Ignore during packaging.')
-    traceback.print_exc(file=sys.stdout)
+    print('ModuleNotFoundError happened. Check your dependencies. Ignore this error during packaging.')
 
 TNTSetup().setup()
 
