@@ -21,6 +21,10 @@ class _TNTSetup(install):
 with open("README.rst", "r", encoding='utf8') as f:
     long_description = f.read()
 
+
+with open("requirements.txt", "r", encoding='utf8') as f:
+    reqs = f.read()
+
 setup(
     name=f'pyiwe',
     version=pyiwe_ver,
@@ -30,18 +34,7 @@ setup(
     author_email='alr.popkov@gmail.com',
     description="Python wrapper for TNT (Tree analysis using New Technology) implied weighting with clades support",
     long_description=long_description,
-    install_requires=[
-        'ete3>=3.1.2',
-        'biopython>=1.78',
-        'tqdm>=4.62.3',
-        'numpy>=1.19',
-        'pandas>=1.1.0',
-        'pillow>=8.4.0',
-        'seaborn>=0.11.2',
-        'matplotlib>=3.5.0',
-        'PyQt5>=5.15.6',
-        'jupyter>=1.0.0',
-    ],
+    install_requires=reqs,
     package_data={'pyiwe': ['tests/testdata/bryocorini/*',
                             'tests/testscripts/*',
                             'tnt_scripts/*',
@@ -49,7 +42,7 @@ setup(
                             ]},
     setup_requires=['flake8'],
     tests_require=['pytest'],
-    python_requires='>=3.7',
+    python_requires='<=3.9.19',
     cmdclass={
         'install': _TNTSetup,
     },

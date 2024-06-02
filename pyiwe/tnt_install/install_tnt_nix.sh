@@ -12,8 +12,8 @@ fi
 
 echo -e "\nPreparing installation"
 echo -e "\nInstalling Parallel Virtual Machine (PVM)"
-apt-get update
-apt-get install -y pvm libncurses5 unzip
+sudo apt-get update
+sudo apt-get install -y pvm libncurses5 unzip
 
 echo -e "\nCreating installation folder"
 mkdir -p $TNT_PATH && cd $TNT_PATH
