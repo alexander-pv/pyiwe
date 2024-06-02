@@ -110,7 +110,7 @@ def runner(args: argparse.Namespace):
     df.to_csv(os.path.join(args.output_folder, 'final_tree_clades_info.csv'), index=False)
     with open(os.path.join(args.output_folder, 'final_tree_newick.txt'), 'w') as f:
         f.write(majority_tree.format(fmt='newick'))
-    open_ete_browser(tree=ETree(majority_tree.format(format='newick')))
+    open_ete_browser(tree=ETree(majority_tree.format(fmt='newick')))
 
     if int(pd.__version__.split('.')[1]) < 3:
         df_tree_flat = df.explode('k_vals')
